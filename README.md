@@ -1,4 +1,4 @@
-# css-minifiers [![Build Status](https://travis-ci.org/ben-eb/css-minifiers.svg?branch=master)][ci] [![NPM version](https://badge.fury.io/js/css-minifiers.svg)][npm] [![Dependency Status](https://gemnasium.com/ben-eb/css-minifiers.svg)][deps]
+# css-minifiers [![Build Status](https://travis-ci.org/ben-eb/css-minifiers.svg?branch=master)][ci] [![npm version](https://badge.fury.io/js/css-minifiers.svg)][npm]
 
 > (almost) all CSS minifiers available for node.js
 
@@ -85,5 +85,4 @@ MIT © Ben Briggs
 [1]: https://github.com/GoalSmashers/css-minification-benchmark
 
 [ci]:   https://travis-ci.org/ben-eb/css-minifiers
-[deps]: https://gemnasium.com/ben-eb/css-minifiers
 [npm]:  http://badge.fury.io/js/css-minifiers
