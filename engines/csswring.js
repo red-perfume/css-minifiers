@@ -1,10 +1,11 @@
 'use strict';
 
-var Engine = require('../engine');
-var csswring = require('csswring');
+const csswring = require('csswring');
+
+const Engine = require('../engine.js');
 
 module.exports = new Engine('csswring', function (css) {
-    return new Promise(function (resolve, reject) {
-        resolve(csswring.wring(css).css);
-    });
+  return new Promise(function (resolve) {
+    resolve(csswring.wring(css).css);
+  });
 });

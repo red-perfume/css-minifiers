@@ -1,12 +1,13 @@
 'use strict';
 
-var Engine = require('../engine');
-var CleanCSS = require('clean-css');
+const CleanCSS = require('clean-css');
+
+const Engine = require('../engine.js');
 
 module.exports = new Engine('clean-css', function (css) {
-    return new CleanCSS({returnPromise: true})
-        .minify(css)
-        .then(function (result) {
-            return result.styles;
-        });
+  return new CleanCSS({ returnPromise: true })
+    .minify(css)
+    .then(function (result) {
+      return result.styles;
+    });
 });

@@ -4,8 +4,8 @@
   "description": "(almost) all CSS minifiers available for node.js",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --config=.eslintrc.js index.js test.js engines",
-    "fix": "eslint --fix --config=.eslintrc.js index.js test.js engines",
+    "lint": "eslint --config=.eslintrc.js index.js test.js engine.js engines",
+    "fix": "eslint --fix --config=.eslintrc.js index.js test.js engine.js engines",
     "test": "tape test.js | tap-spec"
   },
   "dependencies": {

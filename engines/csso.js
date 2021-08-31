@@ -1,9 +1,9 @@
 'use strict';
 
-var Engine = require('../engine');
+const Engine = require('../engine.js');
 
 module.exports = new Engine('csso', function (css) {
-    return new Promise(function (resolve, reject) {
-        resolve(require('csso').minify(css).css);
-    });
+  return new Promise(function (resolve) {
+    resolve(require('csso').minify(css).css);
+  });
 });
