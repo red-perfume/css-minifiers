@@ -3,46 +3,41 @@
   "version": "3.0.0",
   "description": "(almost) all CSS minifiers available for node.js",
   "main": "index.js",
-  "files": [
-    "index.js",
-    "engine.js",
-    "engines",
-    "LICENSE-MIT"
-  ],
-  "engines": {
-    "node": ">=6"
-  },
   "scripts": {
     "test": "tape test.js | tap-spec"
+  },
+  "dependencies": {
+    "bulk-require": "^1.0.1",
+    "clean-css": "^5.1.5",
+    "crass": "^0.12.3",
+    "css-condense": "^0.1.1",
+    "csso": "^4.2.0",
+    "csswring": "^7.0.0",
+    "ncss": "^1.1.1",
+    "pretty-hrtime": "^1.0.3",
+    "sqwish": "^0.2.2",
+    "ycssmin": "^1.0.1"
+  },
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^5.3.1"
   },
   "keywords": [
     "compression",
     "css",
     "minify"
   ],
+  "files": [
+    "index.js",
+    "engine.js",
+    "engines",
+    "LICENSE-MIT"
+  ],
+  "license": "MIT",
   "author": {
     "name": "Ben Briggs",
     "email": "beneb.info@gmail.com",
     "url": "http://beneb.info"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "bulk-require": "^1.0.0",
-    "clean-css": "^4.0.x",
-    "crass": "^0.10.x",
-    "css-condense": "^0.1.x",
-    "csso": "^2.3.x",
-    "cssnano": "^3.3.x",
-    "cssshrink": "0.0.x",
-    "csswring": "^5.1.x",
-    "ncss": "^1.1.x",
-    "pretty-hrtime": "^1.0.1",
-    "sqwish": "^0.2.x",
-    "ycssmin": "^1.0.x"
-  },
-  "devDependencies": {
-    "tap-spec": "^4.1.0",
-    "tape": "^4.2.2"
   },
   "repository": "ben-eb/css-minifiers",
   "homepage": "https://github.com/ben-eb/css-minifiers"

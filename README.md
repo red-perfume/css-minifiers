@@ -11,20 +11,21 @@ provides a simple, normalised API for all available tools.
 
 ## Engine support
 
-| Engine | Support |
-| ------ | ------- |
-| [clean-css](https://github.com/jakubpawlowicz/clean-css)  | ✅ |
-| [crass](https://github.com/mattbasta/crass)               | ✅ |
-| [css-condense](https://github.com/rstacruz/css-condense)  | ✅ |
-| [css-smasher](https://github.com/MarkBennett/css-smasher) | ❌ |
-| [cssnano](https://github.com/ben-eb/cssnano)              | ✅ |
-| [csso](https://github.com/css/csso)                       | ✅ |
-| [cssshrink](https://github.com/stoyan/cssshrink)          | ✅ |
-| [csswring](https://github.com/hail2u/node-csswring)       | ✅ |
-| [more-css](https://github.com/army8735/more)              | ❌ |
-| [ncss](https://github.com/wasche/ncss)                    | ✅ |
-| [sqwish](https://github.com/ded/sqwish)                   | ✅ |
-| [ycssmin](https://github.com/yui/ycssmin)                 | ✅ |
+Engine                                                    | Support | Notes
+:--                                                       | :--     | :--
+[clean-css](https://github.com/jakubpawlowicz/clean-css)  | ✅      |
+[crass](https://github.com/mattbasta/crass)               | ✅      | Smallest file size out of all tested
+[css-condense](https://github.com/rstacruz/css-condense)  | ✅      |
+[css-smasher](https://github.com/MarkBennett/css-smasher) | ❌      |
+[cssnano](https://github.com/ben-eb/cssnano)              | ❌      | Verions 3 worked, but 5 now requires PostCSS to import a jungle with a gorrilla to get a banana
+[csso](https://github.com/css/csso)                       | ✅      |
+[cssshrink](https://github.com/stoyan/cssshrink)          | ❌      | It uses "latest" dependency versions that are incompatible with it
+[csswring](https://github.com/hail2u/node-csswring)       | ✅      |
+[more-css](https://github.com/army8735/more)              | ❌      |
+[ncss](https://github.com/wasche/ncss)                    | ✅      |
+[sqwish](https://github.com/ded/sqwish)                   | ✅      |
+[ycssmin](https://github.com/yui/ycssmin)                 | ✅      | largest file size out of all tested
+
 
 If you've written a minifier that you'd like to add to this list, please send a
 pull request!
