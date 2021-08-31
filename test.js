@@ -4,6 +4,7 @@ const test = require('tape');
 const minifiers = require('./');
 
 const charset = '@charset "utf-8";';
+const utf16Encoding = '\ufeff';
 const h1Long = 'h1::before,';
 const h1 = 'h1:before{';
 const marginOriginal = 'margin: 10px 20px 10px 20px;';
@@ -113,6 +114,21 @@ const outputMap = {
       minWidthInit.replace(';', ''),
       closeQuote,
       charset.replace(';', '')
+    ],
+    // 241
+    sass: [
+      utf16Encoding,
+      h1Long,
+      h1,
+      marginOriginal.replace(': ', ':'),
+      colorRed,
+      fontWeight,
+      fontWeight,
+      bgPositionWords,
+      quotes,
+      gradientOriginal.replace(': ', ':'),
+      minWidthInit.replace(';', ''),
+      closeQuote
     ],
     // 244
     'css-condense': [
