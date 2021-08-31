@@ -13,8 +13,8 @@ provides a simple, normalised API for all available tools.
 
 Engine                                                    | Support | Notes
 :--                                                       | :--     | :--
-[clean-css](https://github.com/jakubpawlowicz/clean-css)  | ✅      |
-[crass](https://github.com/mattbasta/crass)               | ✅      | Smallest file size out of all tested
+[clean-css](https://github.com/jakubpawlowicz/clean-css)  | ✅      | second largest in file size, slowest to run
+[crass](https://github.com/mattbasta/crass)               | ✅      | Smallest file size out of all tested, second slowest
 [css-condense](https://github.com/rstacruz/css-condense)  | ✅      |
 [css-smasher](https://github.com/MarkBennett/css-smasher) | ❌      |
 [cssnano](https://github.com/ben-eb/cssnano)              | ❌      | Verions 3 worked, but 5 now requires PostCSS to import a jungle with a gorrilla to get a banana
@@ -23,8 +23,9 @@ Engine                                                    | Support | Notes
 [csswring](https://github.com/hail2u/node-csswring)       | ✅      |
 [more-css](https://github.com/army8735/more)              | ❌      |
 [ncss](https://github.com/wasche/ncss)                    | ✅      |
+[sass](https://github.com/sass/dart-sass)                 | ✅      | Though Sass does a lot more, it can still just be used for CSS minification and is 3rd slowest
 [sqwish](https://github.com/ded/sqwish)                   | ✅      |
-[ycssmin](https://github.com/yui/ycssmin)                 | ✅      | largest file size out of all tested
+[ycssmin](https://github.com/yui/ycssmin)                 | ✅      | largest file size out of all tested, also fastest to run
 
 
 If you've written a minifier that you'd like to add to this list, please send a
