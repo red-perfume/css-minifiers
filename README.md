@@ -3,7 +3,7 @@ This repo was forked from Ben Briggs' `css-minifiers`. It has been tweaked for t
 ## Engine support
 
 Engine                                                    | Stars | Runs | Size | Time (ms) | Notes
-:--                                                       | --:   | :--  | :--  | --:       | :--
+:--                                                       | --:   | :--: | :--  | --:       | :--
 [clean-css](https://github.com/jakubpawlowicz/clean-css)  | 3,808 | ✅   | 252  | 16.00     | second largest in file size, slowest to run
 [crass](https://github.com/mattbasta/crass)               |    98 | ✅   | 186  | 15.00     | Smallest file size out of all tested, second slowest
 [css-condense](https://github.com/rstacruz/css-condense)  |   209 | ✅   | 244  | 12.00     |
