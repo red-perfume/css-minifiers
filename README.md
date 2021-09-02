@@ -18,8 +18,6 @@ Engine                                                    | Stars | Runs | Size 
 [sqwish](https://github.com/ded/sqwish)                   |   201 | ✅   | 211  | 4.30      | Second best speed, 4th best compression
 [ycssmin](https://github.com/yui/ycssmin)                 |    52 | ✅   | 253  | 3.95      | largest file size out of all tested, also fastest to run
 
-If you've written a minifier that you'd like to add to this list, please send a pull request!
-
 
 ## Usage
 
