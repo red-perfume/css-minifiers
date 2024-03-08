@@ -12,6 +12,7 @@ Engine                                                    | Stars | Runs | Size 
 [csso](https://github.com/css/csso)                       | 3,334 | ✅   | 209  | 10.00     |
 [cssshrink](https://github.com/stoyan/cssshrink)          | 1,073 | ❌   |      |           | It uses "latest" dependency versions that are incompatible with it
 [csswring](https://github.com/hail2u/node-csswring)       |   163 | ✅   | 214  | 8.77      |
+[lightning](https://lightningcss.dev)                     | 5,631 | TODO |      |           | Haven't tested this one yet, written in rust, may be fast
 [more-css](https://github.com/army8735/more)              |    67 | ❌   |      |           | This is more like Less/Stylus, AKA a worse version of Sass, with no releases and no updates in 6 years
 [ncss](https://github.com/wasche/ncss)                    |     7 | ✅   | 252  | 7.69      |
 [sass](https://github.com/sass/dart-sass)                 | 2,534 | ✅   | 241  | 13.00     | Though Sass does a lot more, it can still just be used for CSS minification and is 3rd slowest
