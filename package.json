@@ -15,6 +15,7 @@
     "css-condense": "^0.1.1",
     "csso": "^4.2.0",
     "csswring": "^7.0.0",
+    "lightningcss": "^1.24.0",
     "ncss": "^1.1.1",
     "pretty-hrtime": "^1.0.3",
     "sass": "^1.38.2",
@@ -46,5 +47,8 @@
     "url": "http://beneb.info"
   },
   "repository": "ben-eb/css-minifiers",
-  "homepage": "https://github.com/ben-eb/css-minifiers"
+  "homepage": "https://github.com/ben-eb/css-minifiers",
+  "volta": {
+    "node": "14.21.3"
+  }
 }

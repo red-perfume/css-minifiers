@@ -6,6 +6,7 @@ const minifiers = require('./');
 const charset = '@charset "utf-8";';
 const utf16Encoding = '\ufeff';
 const h1Long = 'h1::before,';
+const h1Bad = 'h1:before,';
 const h1 = 'h1:before{';
 const marginOriginal = 'margin: 10px 20px 10px 20px;';
 const margin = 'margin:10px 20px;';
@@ -13,6 +14,7 @@ const gradientOriginal = 'background: linear-gradient(to bottom, #ffe500 0%, #ff
 const gradient = 'background:linear-gradient(to bottom,#ffe500 0%,#ffe500 50%,#121 50%,#121 100%);';
 const gradient0 = 'background:linear-gradient(to bottom,#ffe500 0,#ffe500 50%,#121 50%,#121 100%);';
 const gradientDeg = 'background:linear-gradient(180deg,#ffe500,#ffe500 50%,#121 0,#121);';
+const gradientHex = 'background:linear-gradient(#ffe500 0% 50%,#121 50% 100%);';
 const bgPostionPercent = 'background-position:100% 100%;';
 const bgPositionWords = 'background-position:bottom right;';
 const colorOriginal = 'color: #ff0000;';
@@ -49,6 +51,17 @@ const cssInput = [
   '/* correct invalid placement */',
   charset
 ].join('\n');
+
+const smallestPossibleWhileLossless = [
+  charset,
+  h1,
+  margin,
+  colorRed,
+  fontWeight,
+  bgPostionPercent,
+  quotesNoSpace,
+  gradientHex
+].join('');
 
 const outputMap = {
   // 186
@@ -114,6 +127,18 @@ const outputMap = {
     minWidthInit.replace(';', ''),
     closeQuote,
     charset.replace(';', '')
+  ],
+  // 153
+  lightningcss: [
+    h1Bad,
+    h1,
+    colorRed,
+    quotes,
+    minWidthInit,
+    gradientHex,
+    margin,
+    fontWeight.replace(';', ''),
+    closeQuote
   ],
   // 241
   sass: [
@@ -192,6 +217,28 @@ const outputMap = {
   ]
 };
 
+
+const longestNameSize = Object.keys(outputMap).sort(function (a, b) {
+  return b.length - a.length;
+})[0].length;
+// Check how close they come to perfection
+console.log('The smallest possible lossless size is ' + smallestPossibleWhileLossless.length + '.');
+Object.keys(outputMap).forEach(function (key) {
+  const outputSize = outputMap[key].join('').length;
+  const smallest = smallestPossibleWhileLossless.length;
+  const message = [
+    key.padEnd(longestNameSize, ' ') + ' has a size of (' + outputSize + ') which is '
+  ];
+  if (outputSize < smallest) {
+    message.push('smaller than is possible losslessly');
+  } else if (outputSize > smallest) {
+    const percent = ((((smallest / outputSize) * 100) - 100) * -1).toFixed(2) + '%';
+    message.push(percent + ' larger than perfection');
+  } else {
+    message.push('is the same as the perfect output (though it may not have produced the perfect output, just a matching size)');
+  }
+  console.log(message.join(''));
+});
 
 test('integration tests', function (t) {
   t.plan(Object.keys(minifiers).length);

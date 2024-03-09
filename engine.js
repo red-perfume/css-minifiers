@@ -1,5 +1,8 @@
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
+
 const pretty = require('pretty-hrtime');
 
 function Engine (name, fn) {
@@ -33,7 +36,9 @@ function Engine (name, fn) {
 }
 
 Engine.prototype._getKey = function (key) {
-  return require(this.name + '/package.json')[key];
+  const manifestPath = path.join('node_modules', this.name, 'package.json');
+  const manifest = JSON.parse(fs.readFileSync(manifestPath));
+  return manifest[key];
 };
 
 Engine.prototype.toString = function () {
